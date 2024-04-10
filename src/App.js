@@ -17,11 +17,11 @@ const App = () => {
           <NavLink to="/" exact>
             Home
           </NavLink>
-          <NavLink to="/about">
-            About
-          </NavLink>
           <NavLink to="/portfolio">
             Portfolio
+          </NavLink>
+          <NavLink to="/about">
+            About
           </NavLink>
           <NavLink to="/contact">
             Contact
