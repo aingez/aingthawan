@@ -1,6 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link, useLocation } from 'react-router-dom';
 import './Navbar.css';
+import Footer from './components/Footer';
 import './App.css';
 
 // Components
@@ -36,6 +37,7 @@ const App = () => {
             <Route path="/" element={<Home />} />
           </Routes>
         </div>
+        <Footer />
       </div>
     </Router>
   );
