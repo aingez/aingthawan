@@ -1,6 +1,7 @@
 .content {
-  margin-top: 8%; /* Adjust this value to match the height of your navbar */
+  margin-top: 8%;
   margin-left: 10%;
+  margin-right: 10%;
 }
 
 html, body, #root {
