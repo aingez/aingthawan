@@ -41,17 +41,16 @@ const Title = styled.div`
 const ContactItem = styled.div`
   display: flex;
   align-items: center;
-  font-size: 1rem;
   text-decoration: none;
   color: #000;
-  font-size: 1.5rem;
-
+  font-size: 1rem;
+  padding-bottom: 0.2rem;
   &:hover {
     color: #004d8c;
   }
-`;
+  `;
 
-const ContactList = styled.div`
+  const ContactList = styled.div`
   margin-top: 0rem;
 `;
 
@@ -81,23 +80,23 @@ const FieldLabel = styled.label`
   opacity: ${({ focused, hasValue }) => (focused || hasValue) ? 0 : 1};
 `;
 
-const Input = styled.input`
-  padding: 0.5rem 1rem;
+const Textarea = styled.textarea`
+  padding: 2rem 1rem 0.5rem;
   border: 1px solid #ccc;
-  border-radius: 40px;
+  border-radius: 20px;
   font-size: 1rem;
+  resize: vertical;
   &:focus {
     outline: none;
     border-color: #656566;
   }
 `;
 
-const Textarea = styled.textarea`
-  padding: 1rem 1rem 0.5rem;
+const Input = styled.input`
+  padding: 0.5rem 1rem;
   border: 1px solid #ccc;
-  border-radius: 20px;
+  border-radius: 40px;
   font-size: 1rem;
-  resize: vertical;
   &:focus {
     outline: none;
     border-color: #656566;
