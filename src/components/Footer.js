@@ -11,12 +11,16 @@ const FooterContainer = styled.footer`
   position: fixed;
   bottom: 0;
   left: 0;
-  width: 100%;
+  right: 0;
+
+  @media (max-width: 768px) {
+    /* No need for max-width rule */
+  }
 `;
 
 const FooterText = styled.div`
   flex: 1;
-  text-align: left; /* Adjust alignment as needed */
+  text-align: center;
 `;
 
 
@@ -25,11 +29,11 @@ const Footer = () => {
     <FooterContainer>
       <FooterText>
         <p>"To see the world, things dangerous to come to, to see behind walls, draw closer, to find each other, and to feel. That is the purpose of life"</p>
-        <p>- Henry Luce</p>
-      </FooterText>
-      <FooterText>
+        <p>- Henry Luce -</p>
         <p>&copy; 2024 Aingthawan K. All rights reserved.</p>
       </FooterText>
+      {/* <FooterText>
+      </FooterText> */}
     </FooterContainer>
   );
 };
