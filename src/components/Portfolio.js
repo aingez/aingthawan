@@ -1,4 +1,44 @@
 import React from 'react';
+import styled from 'styled-components';
+
+const PortfolioWrapper = styled.div`
+  padding: 8rem;
+`;
+
+const Title = styled.h1`
+  text-align: center;
+  margin-bottom: 2rem;
+`;
+
+const ProjectsWrapper = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 2rem;
+`;
+
+const ProjectWrapper = styled.div`
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+`;
+
+const ProjectImage = styled.img`
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+`;
+
+const ProjectTitle = styled.h3`
+  padding: 1rem;
+  text-align: center;
+`;
+
+const ProjectDescription = styled.p`
+  padding: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+`;
 
 const Portfolio = () => {
   const projects = [
@@ -23,19 +63,20 @@ const Portfolio = () => {
   ];
 
   return (
-    <div>
-      <h1>My Portfolio</h1>
-      <div>
+    <PortfolioWrapper>
+      <Title>My Portfolio</Title>
+      <ProjectsWrapper>
         {projects.map((project) => (
-          <div key={project.id}>
-            <img src={project.image} alt={project.title} />
-            <h3>{project.title}</h3>
-            <p>{project.description}</p>
-          </div>
+          <ProjectWrapper key={project.id}>
+            <ProjectImage src={project.image} alt={project.title} />
+            <ProjectTitle>{project.title}</ProjectTitle>
+            <ProjectDescription>{project.description}</ProjectDescription>
+          </ProjectWrapper>
         ))}
-      </div>
-    </div>
+      </ProjectsWrapper>
+    </PortfolioWrapper>
   );
 };
 
 export default Portfolio;
+
