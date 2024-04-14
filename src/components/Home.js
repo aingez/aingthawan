@@ -7,6 +7,10 @@ const Container = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   padding: 15% 15%;
+
+  @media (max-width: 768px) {
+    padding: 20% 10%;
+  }
 `;
 
 const Title = styled.h1`
@@ -16,6 +20,10 @@ const Title = styled.h1`
   overflow: hidden;
   border-right: 0.15em solid orange;
   // white-space: nowrap;
+
+  @media (max-width: 768px) {
+    font-size: 3rem;
+  }
 `;
 
 const Description = styled.p`
