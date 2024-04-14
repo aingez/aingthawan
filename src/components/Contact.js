@@ -8,6 +8,7 @@ import styled from 'styled-components';
 import profilePic from '../my_picture/contact_page_2.JPG';
 
 const Container = styled.div`
+  padding: 8% 15%;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -48,9 +49,17 @@ const ContactItem = styled.div`
   &:hover {
     color: #004d8c;
   }
-  `;
+`;
 
-  const ContactList = styled.div`
+const StyledLink = styled(Link)`
+  color: inherit;
+  text-decoration: none;
+  &:hover {
+    color: #004d8c;
+  }
+`;
+
+const ContactList = styled.div`
   margin-top: 0rem;
 `;
 
@@ -137,12 +146,12 @@ const Contact = () => {
     setMessage('');
   };
 
-const contact_list = [
-  { id: 1, title: <MdEmail />, description: <a href="mailto:aingthawan@gmail.com">AINGTHAWAN@GMAIL.COM</a> },
-  { id: 2, title: <FaSquareGithub />, description: <Link to="https://github.com/aingthawan" target="_blank" rel="noopener noreferrer">AINGTHAWAN K.</Link> },
-  { id: 3, title: <FaLinkedin />, description: <a href="https://www.linkedin.com/in/aingthawan-k-8b3b24245/" target="_blank" rel="noopener noreferrer">AINGTHAWAN K.</a> },
-  { id: 4, title: <SiThingiverse />, description: <Link to="https://www.thingiverse.com/aing1970/designs" target="_blank" rel="noopener noreferrer">AING1970</Link> },
-];
+  const contact_list = [
+    { id: 1, title: <MdEmail />, description: <a>AINGTHAWAN@GMAIL.COM</a> },
+    { id: 2, title: <FaSquareGithub />, description: <StyledLink to="https://github.com/aingthawan" target="_blank" rel="noopener noreferrer">AINGTHAWAN K.</StyledLink> },
+    { id: 2, title: <FaLinkedin />, description: <StyledLink to="https://www.linkedin.com/in/aingthawan-k-8b3b24245/" target="_blank" rel="noopener noreferrer">AINGTHAWAN K.</StyledLink> },
+    { id: 4, title: <SiThingiverse />, description: <StyledLink to="https://www.thingiverse.com/aing1970/designs" target="_blank" rel="noopener noreferrer">AING1970</StyledLink> },
+  ];
 
   return (
     <Container>
@@ -151,7 +160,7 @@ const contact_list = [
         <ContactList>
           {contact_list.map((contact) => (
             <ContactItem key={contact.id}>
-              {contact.title} : {contact.description}
+              {contact.title}{contact.description}
             </ContactItem>
           ))}
         </ContactList>

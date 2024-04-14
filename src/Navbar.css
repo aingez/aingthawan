@@ -22,7 +22,6 @@
 .nav-link.active {
   /* font-weight: bold; */
   color: #000000;
-  transition: all 1s ease;
 }
 /* underline settings */
 .nav-link.active::after {
