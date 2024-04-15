@@ -56,7 +56,25 @@ const Portfolio = () => {
     },
     {
       id: 3,
-      title: 'Project 3',
+      title: 'Project 4',
+      description: 'This is a description of Project 3.',
+      image: 'project3.jpg',
+    },
+    {
+      id: 4,
+      title: 'Project 5',
+      description: 'This is a description of Project 3.',
+      image: 'project3.jpg',
+    },
+    {
+      id: 4,
+      title: 'Project 6',
+      description: 'This is a description of Project 3.',
+      image: 'project3.jpg',
+    },
+    {
+      id: 6,
+      title: 'Project 7',
       description: 'This is a description of Project 3.',
       image: 'project3.jpg',
     },

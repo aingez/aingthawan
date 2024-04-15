@@ -2,13 +2,13 @@ import React from 'react';
 import styled from 'styled-components';
 
 const FooterContainer = styled.footer`
-  background-color: #3333331f;
+  background-color: #fff;
   color: #000;
   font-size: 0.7rem;
   padding: 1rem;
   display: flex;
   justify-content: space-between;
-  position: fixed;
+  position: relative;
   bottom: 0;
   left: 0;
   right: 0;

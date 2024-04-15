@@ -8,10 +8,17 @@ import styled from 'styled-components';
 import profilePic from '../my_picture/contact_page_2.JPG';
 
 const Container = styled.div`
-  padding: 8% 15%;
+  padding: 8% 10%;
+  padding-bottom: 15%;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+
+  @media (max-width: 768px) {
+    padding-top: 20%;
+    padding-bottom: 50%;
+    flex-direction: column;
+  }
 `;
 
 const ContentContainer = styled.div`
@@ -22,15 +29,27 @@ const PictureContainer = styled.div`
   width: 550px;
   height: 550px;
   margin-left: 0rem;
-  position: sticky;
   top: 0rem;
+  position: sticky;
   overflow: hidden;
+
+  @media (max-width: 768px) {
+    width: 0%;
+    height: auto;
+    // position: static;
+    // margin-top: 2rem;
+  }
 `;
 
 const Picture = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
+  border-radius: 8rem;
+
+  @media (max-width: 768px) {
+    border-radius: 0rem;
+  }
 `;
 
 const Title = styled.div`
@@ -48,6 +67,10 @@ const ContactItem = styled.div`
   padding-bottom: 0.2rem;
   &:hover {
     color: #004d8c;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
   }
 `;
 
@@ -70,6 +93,10 @@ const FormContainer = styled.div`
   margin-bottom: 0.5rem;
   margin-top: 1.5rem;
   margin-right: 50%;
+
+  @media (max-width: 768px) {
+    margin-right: 0;
+  }
 `;
 
 const FormField = styled.div`
@@ -123,6 +150,11 @@ const SubmitButton = styled.button`
   transition: all 1s ease;
   &:hover {
     background-color: #000;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 0.9rem;
+    padding: 0.4rem 0.8rem;
   }
 `;
 

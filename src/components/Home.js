@@ -7,9 +7,11 @@ const Container = styled.div`
   justify-content: flex-start;
   align-items: flex-start;
   padding: 15% 15%;
+  padding-bottom: 30%;
 
   @media (max-width: 768px) {
     padding: 20% 10%;
+    padding-bottom: 80%;
   }
 `;
 
