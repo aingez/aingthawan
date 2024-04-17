@@ -47,7 +47,7 @@ const DescriptionContainer = styled.div`
 const DescriptionItem = styled.p`
   font-size: 1rem;
   margin-bottom: 1rem;
-  width: 48%;
+  width: 50%;
 
   @media (max-width: 768px) {
     width: 100%;

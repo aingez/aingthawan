@@ -5,7 +5,7 @@ import { FaSquareGithub } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import { SiThingiverse } from "react-icons/si";
 import styled from 'styled-components';
-import profilePic from '../my_picture/contact_page_2.JPG';
+import profilePic from '../my_picture/contact_page_3.JPG';
 
 const Container = styled.div`
   padding: 8% 15%;
@@ -92,7 +92,7 @@ const FormContainer = styled.div`
   gap: 0.2rem;
   margin-bottom: 0.5rem;
   margin-top: 1.5rem;
-  margin-right: 15%;
+  margin-right: 30%;
 
   @media (max-width: 768px) {
     margin-right: 0;
@@ -119,7 +119,7 @@ const FieldLabel = styled.label`
 const Textarea = styled.textarea`
   padding: 2rem 1rem 0.5rem;
   border: 1px solid #ccc;
-  border-radius: 20px;
+  border-radius: 10px;
   font-size: 1rem;
   resize: vertical;
   &:focus {
@@ -131,7 +131,7 @@ const Textarea = styled.textarea`
 const Input = styled.input`
   padding: 0.5rem 1rem;
   border: 1px solid #ccc;
-  border-radius: 40px;
+  border-radius: 10px;
   font-size: 1rem;
   &:focus {
     outline: none;
