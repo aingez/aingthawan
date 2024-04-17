@@ -8,7 +8,7 @@ import styled from 'styled-components';
 import profilePic from '../my_picture/contact_page_2.JPG';
 
 const Container = styled.div`
-  padding: 8% 10%;
+  padding: 8% 15%;
   padding-bottom: 15%;
   display: flex;
   justify-content: space-between;
@@ -45,7 +45,7 @@ const Picture = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 8rem;
+  border-radius: 0rem;
 
   @media (max-width: 768px) {
     border-radius: 0rem;
@@ -92,7 +92,7 @@ const FormContainer = styled.div`
   gap: 0.2rem;
   margin-bottom: 0.5rem;
   margin-top: 1.5rem;
-  margin-right: 50%;
+  margin-right: 15%;
 
   @media (max-width: 768px) {
     margin-right: 0;
