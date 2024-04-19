@@ -19,7 +19,7 @@ const App = () => {
             Home
           </NavLink>
           <NavLink to="/portfolio">
-            Portfolio
+            Works
           </NavLink>
           <NavLink to="/about">
             About
