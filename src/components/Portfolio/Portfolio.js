@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { portfolioData } from './portfolioData';
 import styled from 'styled-components';
+import Popup from './Popup';
 
 export const CardGrid = styled.div`
   display: grid;
@@ -14,6 +15,10 @@ export const CardContainer = styled.div`
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 16px;
   background-color: #fff;
+
+  &:hover {
+    background-color: #dbdbdb;
+  }
 `;
 
 export const CardTitle = styled.h3`
@@ -41,6 +46,7 @@ export const CardImage = styled.img`
 `;
 
 export const CardLink = styled.a`
+  margin-top: 5%;
   display: inline-block;
   padding: 8px 16px;
   background-color: #007bff;
@@ -55,32 +61,51 @@ export const CardLink = styled.a`
 `;
 
 export const PortfolioContainer = styled.div`
-  padding-top: 5%;
-  padding: 10%;
+  padding-top: 7%;
+  padding-left: 15%;
+  padding-right: 15%;
 `;
 
-export const PortfolioTitle = styled.h1`
-
+const Title = styled.div`
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
 `;
 
 const Portfolio = () => {
+  const [selectedCardIndex, setSelectedCardIndex] = useState(null);
+
+  const handleCardClick = (index) => {
+    setSelectedCardIndex(index);
+  };
+
+  const handleClosePopup = () => {
+    setSelectedCardIndex(null);
+  };
+
   return (
     <PortfolioContainer>
-      <PortfolioTitle>Portfolio</PortfolioTitle>
+      <Title>Portfolio</Title>
       <CardGrid>
         {portfolioData.map((project, index) => (
-          <CardContainer key={index}>
+          <CardContainer key={index} onClick={() => handleCardClick(index)}>
             <CardTitle>{project.title}</CardTitle>
             <CardDescription>{project.description}</CardDescription>
             <ImageContainer>
               <CardImage src={project.image} alt={project.title} />
             </ImageContainer>
-            <CardLink href={project.link} target="_blank" rel="noopener noreferrer">
+            {/* <CardLink href={project.link} target="_blank" rel="noopener noreferrer">
               Visit Project
-            </CardLink>
+            </CardLink> */}
           </CardContainer>
         ))}
       </CardGrid>
+      {selectedCardIndex !== null && (
+        <Popup
+          project={portfolioData[selectedCardIndex]}
+          onClose={handleClosePopup}
+        />
+      )}
     </PortfolioContainer>
   );
 };

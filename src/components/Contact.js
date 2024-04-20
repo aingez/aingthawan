@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
+import profilePic from '../my_picture/contact_page_3.JPG';
 import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 import { MdEmail } from "react-icons/md";
 import { FaSquareGithub } from "react-icons/fa6";
 import { FaLinkedin } from "react-icons/fa";
 import { SiThingiverse } from "react-icons/si";
-import styled from 'styled-components';
-import profilePic from '../my_picture/contact_page_3.JPG';
 
 const Container = styled.div`
   padding: 8% 15%;

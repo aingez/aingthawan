@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const Container = styled.div`
   display: flex;
@@ -69,7 +70,9 @@ const Home = () => {
       {/* <SubTitle>อิงธวัล เครือคล้าย</SubTitle> */}
       {/* <Description>อิงธวัล เครือคล้าย</Description> */}
       <Description>Hi, Welcome to my personal website, Hope you can learn more about me and my work.</Description>
-      <Button>View My Work</Button>
+      <Link to="/portfolio" style={{ textDecoration: 'none' }}>
+        <Button>View My Work</Button>
+      </Link>
     </Container>
   );
 };
