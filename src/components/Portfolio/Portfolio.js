@@ -16,12 +16,11 @@ export const CardContainer = styled.div`
   padding: 16px;
   background-color: #fff;
   cursor: pointer;
-  transition: box-shadow 0.5s ease;
-  transition: background-color 0.5s ease;
+  transition: box-shadow 1s ease;
 
   &:hover {
     background-color: #fff9f2;
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 4px 4px 4px #d1d1d1;
   }
 `;
 

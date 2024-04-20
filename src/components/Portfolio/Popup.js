@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 
 const PopupContainer = styled.div`
@@ -7,7 +7,7 @@ const PopupContainer = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #00000080;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -18,30 +18,63 @@ const PopupContent = styled.div`
   background-color: #fff;
   padding: 20px;
   border-radius: 8px;
-  max-width: 80%;
-  max-height: 80%;
-  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 60%;
+  height: 80%;
+  overflow-y: auto; /* Enable vertical scrolling */
+
 `;
 
-const CloseButton = styled.button`
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: transparent;
-  border: none;
-  font-size: 24px;
-  cursor: pointer;
+export const ImageContainer = styled.div`
+  width: 100%;
+  height: 70vh; /* Set a fixed height for the image container */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Maintain aspect ratio and fit within the container */
+  }
+`;
+
+export const ContentContainer = styled.div`
+  background-color: #fff;
+  padding: 10px;
 `;
 
 const Popup = ({ project, onClose }) => {
+  const popupRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (popupRef.current && !popupRef.current.contains(event.target)) {
+        onClose();
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [onClose]);
+
   return (
     <PopupContainer>
-      <PopupContent>
-        <CloseButton onClick={onClose}>×</CloseButton>
-        <h2>{project.title}</h2>
-        <p>{project.description}</p>
-        <img src={project.image} alt={project.title} style={{ maxWidth: '100%' }} />
-        <p>{project.details}</p>
+      <PopupContent ref={popupRef}>
+        <ImageContainer>
+          <img src={project.image} alt={project.title} />
+        </ImageContainer>
+        <ContentContainer>
+          <h2>{project.title}</h2>
+          {/* <p>{project.description}</p> */}
+          {(project.details).map((paragraph, index) => (
+            <li key={index}>{paragraph}</li>
+          ))}
+        </ContentContainer>
       </PopupContent>
     </PopupContainer>
   );
