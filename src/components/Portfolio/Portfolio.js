@@ -15,9 +15,13 @@ export const CardContainer = styled.div`
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   padding: 16px;
   background-color: #fff;
+  cursor: pointer;
+  transition: box-shadow 0.5s ease;
+  transition: background-color 0.5s ease;
 
   &:hover {
-    background-color: #dbdbdb;
+    background-color: #fff9f2;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.1);
   }
 `;
 
@@ -53,11 +57,6 @@ export const CardLink = styled.a`
   color: #fff;
   text-decoration: none;
   border-radius: 4px;
-  transition: background-color 0.3s ease;
-
-  &:hover {
-    background-color: #0056b3;
-  }
 `;
 
 export const PortfolioContainer = styled.div`
