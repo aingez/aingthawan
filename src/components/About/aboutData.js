@@ -1,4 +1,4 @@
-import AboutPic from '../../my_picture/me_pic_1.JPG';
+import AboutPic from '../../my_picture/aboutPicture/me_pic_1.JPG';
 
 export const aboutData = {
     title: "About Me",
