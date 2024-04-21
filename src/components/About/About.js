@@ -81,8 +81,12 @@ const About = ({ title, description, buttonText, imageSrc }) => {
           <Button>{buttonText || aboutData.buttonText}</Button>
         </DescriptionItem>
         <DescriptionItem>
-          {(description || aboutData.description).map((paragraph, index) => (
+          {(aboutData.description).map((paragraph, index) => (
             <p key={index}>{paragraph}</p>
+          ))}
+          <h3>In a nutshell, I . . .</h3>
+          {(aboutData.ilike).map((paragraph, index) => (
+            <li key={index}>{paragraph}</li>
           ))}
         </DescriptionItem>
       </DescriptionContainer>

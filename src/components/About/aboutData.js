@@ -8,6 +8,13 @@ export const aboutData = {
       "Beyond the technical realm, I have diverse interests that bring balance to my life. I cherish quiet moments at home, especially on a rainy day, and I'm particularly fond of the film 'The Secret Life of Walter Mitty.' I'm also drawn to realms of sustainability, solarpunk design, and the frontiers of robotics. And when it comes to sports, I enjoy the thrill of rally racing, the serenity of freediving, and the focus of tactical shooting.",
       "Whether tinkering, exploring the great outdoors, or simply reflecting on life's simple pleasures, I approach each day with a spirit of curiosity and a desire to grow. I invite you to delve into my resume and project portfolio to learn more about my background and passions."
     ],
+    ilike: [
+      "Like to : Tinkering, Modifying, Photography, Travel, 3D-Printing, ...",
+      "Car I like : Porsche 930 turbo, Mazda MX5, Suzuki Swift",
+      "Bike I like : Honda RC174, Super Cub, CB77, Cake Kalk, BMW R75",
+      "Interested : Tactical Shooting, Climbing, SmartHome, SolarPunk",
+      "Goals : Financial Stable, Happy, Healthy, :)",
+    ],
     buttonText: "Download Resume",
     imageSrc: AboutPic
   };

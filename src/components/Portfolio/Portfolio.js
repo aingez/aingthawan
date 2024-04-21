@@ -98,7 +98,7 @@ const Portfolio = () => {
 
   return (
     <PortfolioContainer>
-      <Title>Portfolio</Title>
+      <Title>What I've Done</Title>
       <CardGrid>
         {portfolioData.map((project, index) => (
           <CardContainer key={index} onClick={() => handleCardClick(index)}>
