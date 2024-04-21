@@ -72,7 +72,14 @@ const Popup = ({ project, onClose }) => {
           <h2>{project.title}</h2>
           {/* <p>{project.description}</p> */}
           {(project.details).map((paragraph, index) => (
-            <li key={index}>{paragraph}</li>
+            <p key={index}>{paragraph}</p>
+          ))}
+          {project.link.map((url, index) => (
+            <li key={index}>
+              <a href={url} target="_blank" rel="noopener noreferrer">
+                {url}
+              </a>
+            </li>
           ))}
         </ContentContainer>
       </PopupContent>

@@ -17,7 +17,6 @@ export const CardContainer = styled.div`
   background-color: #fff;
   cursor: pointer;
   transition: box-shadow 1s ease;
-
   &:hover {
     background-color: #fff9f2;
     box-shadow: 4px 4px 4px #d1d1d1;
@@ -70,6 +69,22 @@ const Title = styled.div`
   margin-bottom: 1rem;
 `;
 
+const CardTags = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 8px;
+`;
+
+const Tag = styled.span`
+  background-color: #f0f0f0;
+  color: #333;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-right: 8px;
+  margin-bottom: 4px;
+  font-size: 12px;
+`;
+
 const Portfolio = () => {
   const [selectedCardIndex, setSelectedCardIndex] = useState(null);
 
@@ -92,17 +107,16 @@ const Portfolio = () => {
             <ImageContainer>
               <CardImage src={project.image} alt={project.title} />
             </ImageContainer>
-            {/* <CardLink href={project.link} target="_blank" rel="noopener noreferrer">
-              Visit Project
-            </CardLink> */}
+            <CardTags>
+              {project.tags.map((tag, tagIndex) => (
+                <Tag key={tagIndex}>{tag}</Tag>
+              ))}
+            </CardTags>
           </CardContainer>
         ))}
       </CardGrid>
       {selectedCardIndex !== null && (
-        <Popup
-          project={portfolioData[selectedCardIndex]}
-          onClose={handleClosePopup}
-        />
+        <Popup project={portfolioData[selectedCardIndex]} onClose={handleClosePopup} />
       )}
     </PortfolioContainer>
   );
