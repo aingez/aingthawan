@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { aboutData } from './aboutData';
+import samplePDF1 from "./resume_aingthawan.pdf";
 
 const Container = styled.div`
   display: flex;
@@ -54,15 +55,16 @@ const DescriptionItem = styled.p`
   }
 `;
 
-const Button = styled.button`
+const Button = styled.a`
   background-color: #969696;
   color: #fff;
   border: none;
   border-radius: 0.25rem;
-  padding: 0.75rem 1.5rem;
+  padding: 0.5rem 0.5rem;
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  text-decoration: none;
 
   &:hover {
     background-color: #db713b;
@@ -78,7 +80,7 @@ const About = ({ title, description, buttonText, imageSrc }) => {
       <DescriptionContainer>
         <DescriptionItem>
           <Title>{title || aboutData.title}</Title>
-          <Button>{buttonText || aboutData.buttonText}</Button>
+          <Button href={samplePDF1} target="_blank" rel="noreferrer">{buttonText || aboutData.buttonText}</Button>
         </DescriptionItem>
         <DescriptionItem>
           {(aboutData.description).map((paragraph, index) => (
