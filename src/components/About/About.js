@@ -60,7 +60,7 @@ const Button = styled.a`
   color: #fff;
   border: none;
   border-radius: 0.25rem;
-  padding: 0.5rem 0.5rem;
+  padding: 0.75rem 1rem;
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s ease;
