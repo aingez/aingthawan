@@ -41,10 +41,18 @@ const CloseButton = styled.button`
   top: 10px; /* Add this line */
   right: 10px; /* Add this line */
   background-color: transparent;
-  color: #ff8f87;
+  color: transparent;
   border: none;
   font-size: 1.2rem;
+
   cursor: pointer;
+  @media (max-width: 768px) {
+    color: #ff8f87;
+  }
+
+  @media (max-width: 480px) {
+    color: #ff8f87;
+  }
 `;
 
 export const ImageContainer = styled.div`
