@@ -230,6 +230,7 @@ const Contact = () => {
           </FormContainer>
           <SubmitButton type="submit">Submit</SubmitButton>
         </form>
+
       </ContentContainer>
       <PictureContainer>
         <Picture src={profilePic} alt="Your Picture" />
