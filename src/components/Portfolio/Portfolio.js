@@ -5,9 +5,19 @@ import Popup from './Popup';
 
 export const CardGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust as needed */
-  grid-gap: 16px; /* Adjust the gap between cards */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 16px;
+
+  /* Media queries for responsive layout */
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+  }
 `;
+
 
 export const CardContainer = styled.div`
   border: 1px solid #ccc;
@@ -21,10 +31,27 @@ export const CardContainer = styled.div`
     background-color: #fff9f2;
     box-shadow: 4px 4px 4px #d1d1d1;
   }
+
+  @media (max-width: 768px) {
+    padding: 12px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 8px;
+  }
 `;
 
 export const CardTitle = styled.h3`
   margin-top: 0;
+  font-size: 1.25rem;
+
+  @media (max-width: 768px) {
+    font-size: 1.1rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1rem;
+  }
 `;
 
 export const CardDescription = styled.p`
@@ -36,7 +63,16 @@ export const ImageContainer = styled.div`
   height: 200px;
   overflow: hidden;
   position: relative;
+
+  @media (max-width: 768px) {
+    height: 150px;
+  }
+
+  @media (max-width: 480px) {
+    height: 120px;
+  }
 `;
+
 
 export const CardImage = styled.img`
   width: 100%;
@@ -61,12 +97,20 @@ export const PortfolioContainer = styled.div`
   padding-top: 7%;
   padding-left: 15%;
   padding-right: 15%;
+  max-width: 1200px; /* Add a max-width for larger screens */
+  margin: 0 auto; /* Center the container */
+  @media (max-width: 480px) {
+    padding-top: 20%;
+  }
 `;
 
 const Title = styled.div`
   font-size: 3rem;
   font-weight: bold;
   margin-bottom: 1rem;
+  @media (max-width: 480px) {
+    font-size: 2rem;
+  }
 `;
 
 const CardTags = styled.div`

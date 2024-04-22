@@ -20,10 +20,31 @@ const PopupContent = styled.div`
   border-radius: 8px;
   display: flex;
   flex-direction: column;
-  max-width: 60%;
-  height: 80%;
+  max-width: 80%;
+  max-height: 80%;
   overflow-y: auto; /* Enable vertical scrolling */
+  position: relative; /* Add this line */
 
+  @media (max-width: 768px) {
+    max-width: 90%;
+    max-height: 90%;
+  }
+
+  @media (max-width: 480px) {
+    max-width: 95%;
+    max-height: 95%;
+  }
+`;
+
+const CloseButton = styled.button`
+  position: absolute; /* Add this line */
+  top: 10px; /* Add this line */
+  right: 10px; /* Add this line */
+  background-color: transparent;
+  color: #ff8f87;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
 `;
 
 export const ImageContainer = styled.div`
@@ -33,6 +54,17 @@ export const ImageContainer = styled.div`
   justify-content: center;
   align-items: center;
   background-color: #fff;
+  padding-top: 0%;
+
+  @media (max-width: 768px) {
+    height: 50vh; /* Reduce the height for smaller screens */
+    padding-top: 7%;
+  }
+
+  @media (max-width: 480px) {
+    height: 30vh; /* Further reduce the height for even smaller screens */
+    padding-top: 7%;
+  }
 
   img {
     max-width: 100%;
@@ -57,6 +89,7 @@ const Popup = ({ project, onClose }) => {
     };
 
     document.addEventListener('mousedown', handleClickOutside);
+
     return () => {
       document.removeEventListener('mousedown', handleClickOutside);
     };
@@ -65,13 +98,14 @@ const Popup = ({ project, onClose }) => {
   return (
     <PopupContainer>
       <PopupContent ref={popupRef}>
+        <CloseButton onClick={onClose}>Close</CloseButton>
         <ImageContainer>
           <img src={project.image} alt={project.title} />
         </ImageContainer>
         <ContentContainer>
           <h2>{project.title}</h2>
           {/* <p>{project.description}</p> */}
-          {(project.details).map((paragraph, index) => (
+          {project.details.map((paragraph, index) => (
             <p key={index}>{paragraph}</p>
           ))}
           {project.link.map((url, index) => (
