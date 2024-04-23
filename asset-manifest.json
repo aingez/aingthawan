@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/static/css/main.f7d7fc50.css",
-    "main.js": "/static/js/main.9a84c890.js",
-    "static/js/453.614fe349.chunk.js": "/static/js/453.614fe349.chunk.js",
-    "static/media/fpga_calculator_1.JPG": "/static/media/fpga_calculator_1.c6f87ebfac88825367d1.JPG",
-    "static/media/esp8266_acciddent_1.JPG": "/static/media/esp8266_acciddent_1.1380a02d14dc77cdb78d.JPG",
-    "static/media/morse_code_decoder_1.JPG": "/static/media/morse_code_decoder_1.235b47e815d9318c7fbb.JPG",
-    "static/media/voron24_1.JPG": "/static/media/voron24_1.31a1fac7784e36990dcf.JPG",
-    "static/media/me_pic_1.JPG": "/static/media/me_pic_1.bfcaa83105904e52f125.JPG",
-    "static/media/rc100_ev_1.JPG": "/static/media/rc100_ev_1.a5b270c007a39244d86c.JPG",
-    "static/media/python_search_engine_1.JPG": "/static/media/python_search_engine_1.bf2e69131b7a2569ddaf.JPG",
-    "static/media/resume_aingthawan.pdf": "/static/media/resume_aingthawan.cf13a0191b4f5648907a.pdf",
-    "static/media/contact_page_3.JPG": "/static/media/contact_page_3.190b90b79794ad7dea26.JPG",
-    "index.html": "/index.html",
-    "main.f7d7fc50.css.map": "/static/css/main.f7d7fc50.css.map",
-    "main.9a84c890.js.map": "/static/js/main.9a84c890.js.map",
-    "453.614fe349.chunk.js.map": "/static/js/453.614fe349.chunk.js.map"
+    "main.css": "/aingthawan/static/css/main.f7d7fc50.css",
+    "main.js": "/aingthawan/static/js/main.cc2cc272.js",
+    "static/js/453.614fe349.chunk.js": "/aingthawan/static/js/453.614fe349.chunk.js",
+    "static/media/fpga_calculator_1.JPG": "/aingthawan/static/media/fpga_calculator_1.c6f87ebfac88825367d1.JPG",
+    "static/media/esp8266_acciddent_1.JPG": "/aingthawan/static/media/esp8266_acciddent_1.1380a02d14dc77cdb78d.JPG",
+    "static/media/morse_code_decoder_1.JPG": "/aingthawan/static/media/morse_code_decoder_1.235b47e815d9318c7fbb.JPG",
+    "static/media/voron24_1.JPG": "/aingthawan/static/media/voron24_1.31a1fac7784e36990dcf.JPG",
+    "static/media/me_pic_1.JPG": "/aingthawan/static/media/me_pic_1.bfcaa83105904e52f125.JPG",
+    "static/media/rc100_ev_1.JPG": "/aingthawan/static/media/rc100_ev_1.a5b270c007a39244d86c.JPG",
+    "static/media/python_search_engine_1.JPG": "/aingthawan/static/media/python_search_engine_1.bf2e69131b7a2569ddaf.JPG",
+    "static/media/resume_aingthawan.pdf": "/aingthawan/static/media/resume_aingthawan.cf13a0191b4f5648907a.pdf",
+    "static/media/contact_page_3.JPG": "/aingthawan/static/media/contact_page_3.190b90b79794ad7dea26.JPG",
+    "index.html": "/aingthawan/index.html",
+    "main.f7d7fc50.css.map": "/aingthawan/static/css/main.f7d7fc50.css.map",
+    "main.cc2cc272.js.map": "/aingthawan/static/js/main.cc2cc272.js.map",
+    "453.614fe349.chunk.js.map": "/aingthawan/static/js/453.614fe349.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f7d7fc50.css",
-    "static/js/main.9a84c890.js"
+    "static/js/main.cc2cc272.js"
   ]
 }
