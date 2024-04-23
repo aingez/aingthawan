@@ -15,7 +15,7 @@ const App = () => {
     <Router>
       <div>
         <nav className="navbar">
-          <NavLink to="/" exact>
+          <NavLink to="/aingthawan" exact>
             Home
           </NavLink>
           <NavLink to="/portfolio">
@@ -34,7 +34,7 @@ const App = () => {
             <Route path="/about" element={<About />} />
             <Route path="/portfolio" element={<Portfolio />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/" element={<Home />} />
+            <Route path="/aingthawan" element={<Home />} />
           </Routes>
         </div>
         <Footer />
