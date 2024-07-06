@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/aingthawan/static/css/main.f7d7fc50.css",
-    "main.js": "/aingthawan/static/js/main.be8588e2.js",
+    "main.js": "/aingthawan/static/js/main.6db26c4a.js",
     "static/js/453.614fe349.chunk.js": "/aingthawan/static/js/453.614fe349.chunk.js",
     "static/media/fpga_calculator_1.JPG": "/aingthawan/static/media/fpga_calculator_1.c6f87ebfac88825367d1.JPG",
     "static/media/esp8266_acciddent_1.JPG": "/aingthawan/static/media/esp8266_acciddent_1.1380a02d14dc77cdb78d.JPG",
@@ -14,11 +14,11 @@
     "static/media/contact_page_3.JPG": "/aingthawan/static/media/contact_page_3.190b90b79794ad7dea26.JPG",
     "index.html": "/aingthawan/index.html",
     "main.f7d7fc50.css.map": "/aingthawan/static/css/main.f7d7fc50.css.map",
-    "main.be8588e2.js.map": "/aingthawan/static/js/main.be8588e2.js.map",
+    "main.6db26c4a.js.map": "/aingthawan/static/js/main.6db26c4a.js.map",
     "453.614fe349.chunk.js.map": "/aingthawan/static/js/453.614fe349.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.f7d7fc50.css",
-    "static/js/main.be8588e2.js"
+    "static/js/main.6db26c4a.js"
   ]
 }
